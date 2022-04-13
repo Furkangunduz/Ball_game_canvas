@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            body {
+                margin: 0;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fixed text-white text-sm ml-2 select-none">
+            Score : <span id="score">0</span>
+        </div>
+        <canvas></canvas>
+        <div
+            class="fixed inset-0 flex items-center justify-center"
+            id="startGame"
+        >
+            <div class="bg-white max-w-md w-full p-6 text-center">
+                <h1 clas="text-4xl font-bold" id="go-score">0</h1>
+                <p class="text-sm text-gray-700">points</p>
+                <div>
+                    <button
+                        id="start"
+                        class="bg-blue-500 text-white w-full py-3"
+                    >
+                        Start Game
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"
+            integrity="sha512-6zTDRWNxo8vI6JZYDCwhrJpg5icK3P4HNnW3czsO5Scb3lAoPDam+/wF3eog4hxcl0h44d0XlIcFkuoSaWHQ2g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="index.js"></script>
+    </body>
+</html>
