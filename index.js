@@ -228,6 +228,7 @@ function animate() {
 
 function playHitSound() {
     let hit = new Audio('hit2.mp3');
+    hit.volume = 0.4;
     hit.play();
 }
 start.addEventListener('click', () => {
