@@ -122,7 +122,7 @@ function initGame() {
 }
 
 function spawnEnemies() {
-    let interval = isMobile ? 2800 : 1000;
+    let interval = isMobile ? 2500 : 1000;
     setInterval(() => {
         let x;
         let y;
