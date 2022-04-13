@@ -122,7 +122,7 @@ function initGame() {
 }
 
 function spawnEnemies() {
-    let interval = isMobile ? 1600 : 1000;
+    let interval = isMobile ? 2000 : 1000;
     setInterval(() => {
         let x;
         let y;
@@ -228,7 +228,7 @@ function animate() {
 
 function playHitSound() {
     let hit = new Audio('hit2.mp3');
-    hit.volume = 0.4;
+    hit.volume = 0.09;
     hit.play();
 }
 start.addEventListener('click', () => {
