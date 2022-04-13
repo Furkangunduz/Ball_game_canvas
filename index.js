@@ -122,7 +122,7 @@ function initGame() {
 }
 
 function spawnEnemies() {
-    let interval = isMobile ? 2000 : 1000;
+    let interval = isMobile ? 2800 : 1000;
     setInterval(() => {
         let x;
         let y;
@@ -141,7 +141,7 @@ function spawnEnemies() {
         let color = `rgb(${Math.random() * 255},${Math.random() * 255},${
             Math.random() * 255
         })`;
-        let random = Math.random() * 4;
+        let random = Math.random() * 3;
         var enemySpeed = random < 2 ? 2 : random;
         const velocity = {
             x: Math.cos(angle) * enemySpeed,
@@ -228,7 +228,7 @@ function animate() {
 
 function playHitSound() {
     let hit = new Audio('hit2.mp3');
-    hit.volume = 0.09;
+    hit.volume = 0.01;
     hit.play();
 }
 start.addEventListener('click', () => {
