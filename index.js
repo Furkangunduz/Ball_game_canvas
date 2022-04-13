@@ -18,6 +18,16 @@ var projectiles = [];
 var enemies = [];
 var particles = [];
 var score = 0;
+var isMobile = false;
+
+if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+    )
+) {
+    isMobile = true;
+}
+
 class Player {
     constructor(x, y, radius, color) {
         this.x = x;
@@ -112,6 +122,7 @@ function initGame() {
 }
 
 function spawnEnemies() {
+    let interval = isMobile ? 1600 : 1000;
     setInterval(() => {
         let x;
         let y;
@@ -138,7 +149,7 @@ function spawnEnemies() {
         };
         const enemy = new Enemy(x, y, radius, color, velocity);
         enemies.push(enemy);
-    }, 1000);
+    }, interval);
 }
 function animate() {
     console.log(particles.length);
